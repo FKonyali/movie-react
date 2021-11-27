@@ -1,4 +1,5 @@
 import headerImg from 'assets/img/header-img.png';
+import Button from 'components/Button';
 import React from 'react';
 import './style.scss';
 
@@ -18,9 +19,9 @@ function Header () {
             <div className="header__img">
               <img alt="Movie" src={headerImg} />
             </div>
-            <a href="#" className="header__btn">
+            <Button>
               CTA BUTTON
-            </a>
+            </Button>
         </div>
     </header>
   )

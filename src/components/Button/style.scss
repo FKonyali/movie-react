@@ -1,0 +1,14 @@
+@import '../../styles/constant/index';
+
+.button {
+  background: $button-background;
+  font: 700 1.125rem $font-family;
+  color: $button-color;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 17px 120px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+}
