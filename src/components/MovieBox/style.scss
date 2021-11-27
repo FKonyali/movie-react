@@ -1,0 +1,58 @@
+@import '../../styles/constant/index';
+
+.movie-box {
+  background: $movie-box-background;
+  display: block;
+  padding: 15px 14px 10px 32px;
+  max-width: 100%;
+  width: 913px;
+  margin: 0 auto 16px auto;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 27px;
+  }
+  &__mtitle {
+    font: 700 1.25rem $font-family;
+    color: $movie-box-title-color;
+  }
+  &__mpoint {
+    font: 700 1.25rem $font-family;
+    color: $movie-box-point-color;
+  }
+  &__bot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__poster {
+    width: 92px;
+    height: 92px;
+    background: #a1a1a1;
+    margin-right: 91px;
+    margin-bottom: 37px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  &__p {
+    font: 400 1.125rem $font-family;
+    color: $movie-box-p-color;
+    max-width: 100%;
+    width: 345px;
+  }
+  &__ptext {
+    &:after {
+      content: ':'
+    }
+  }
+}

@@ -20,7 +20,7 @@ function Header () {
           <img alt="Movie" src={headerImg} />
         </div>
         <Button>
-          CTA BUTTON
+          RESERVATION
         </Button>
       </div>
     </header>

@@ -2,10 +2,11 @@ import React from 'react';
 import './style.scss';
 
 function Button ({
-  children
+  children,
+  style = {}
 }) {
   return (
-    <button className="button">
+    <button className="button" style={style}>
       { children }
     </button>
   )
