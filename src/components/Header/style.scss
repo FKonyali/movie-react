@@ -25,11 +25,11 @@
   &__title {
     font: 700 36px $font-family;
     color: $header-title-color;
-    margin-bottom: 38px;
+    margin-bottom: 2.375rem;
   }
   &__desc {
-    font: 600 24px $font-family;
-    margin-bottom: 24px;
+    font: 600 1.5rem $font-family;
+    margin-bottom: 1.5rem;
     color: $header-desc-color;
   }
   &__img {
@@ -42,7 +42,7 @@
   }
   &__btn {
     background: $button-background;
-    font: 700 18px $font-family;
+    font: 700 1.125rem $font-family;
     color: $button-color;
     text-transform: uppercase;
     display: inline-block;
@@ -58,11 +58,11 @@
   @media (max-width: 850px) {
     .header {
       &__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-bottom: 20px;
       }
       &__desc {
-        font-size: 16px;
+        font-size: 1rem;
       }
       &__btn {
         padding: 13px 80px;
