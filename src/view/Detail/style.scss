@@ -25,7 +25,9 @@
 
 @media (max-width: 600px) {
   .content {
-    flex-wrap: wrap;
+    &__container {
+      flex-wrap: wrap;
+    }
     &__info {
       order: 1;
       margin-top: 15px;
