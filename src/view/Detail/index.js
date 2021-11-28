@@ -42,7 +42,7 @@ function Detail() {
       </Button>
       <div className="content__container">
         {
-          movieDetail && (
+          movieDetail && movieDetail.Response ? (
             <>
               <div className="content__info">
                 <ul>
@@ -79,6 +79,9 @@ function Detail() {
                 <Image src={movieDetail.Poster} alt={movieDetail.Title} />
               </div>
             </>
+          ) : (
+            movieDetail &&
+            <div> { movieDetail.split('Error":"')[1].replaceAll('}','') } </div>
           )
         }
         {
