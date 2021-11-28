@@ -4,13 +4,15 @@ import './style.scss';
 function Button ({
   children,
   style = {},
-  onClick = () => {}
+  onClick = () => {},
+  disabled
 }) {
   return (
     <button 
       className="button" 
       style={style}
       onClick={onClick}
+      disabled={disabled}
     >
       { children }
     </button>

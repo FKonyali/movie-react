@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getData } from 'store/requests/global';
 import MovieBox from 'components/MovieBox';
-import Header from 'components/Header';
-import './style.scss';
 import Loading from 'components/Loading';
+import Header from 'components/Header';
 import Button from 'components/Button';
+import './style.scss';
+
+let page = 1;
 
 function Home() {
   const [movies, setMovies] = useState(null);
@@ -22,7 +24,16 @@ function Home() {
   }, []);
 
   const moreMovie = () => {
-    console.log('...')
+    page++;
+    setLoading(true);
+    getData({ url: `?apikey=ceb2ae86&s=movie&page=${page}` }).then((response) => {
+      setMovies({...movies, response});
+      setLoading(false);
+    }).catch((error) => {
+      setMovies(null);
+      setLoading(false);
+      console.log(error);
+    });
   }
 
   return (
@@ -59,6 +70,7 @@ function Home() {
         }}>
           <Button
             onClick={moreMovie}
+            disabled={loading}
           >
             More Movie (+10)
           </Button>
