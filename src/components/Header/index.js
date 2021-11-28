@@ -6,7 +6,7 @@ import './style.scss';
 
 function Header () {
   return (
-    <header className="header">
+    <header className="header" data-testid="test">
       <div className="header__container">
         <h1 className="header__title header--maxwidth">
           Lorem Ipsum <br/>

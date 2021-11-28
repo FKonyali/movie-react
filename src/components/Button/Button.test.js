@@ -7,5 +7,8 @@ import Button from '.';
 
 test('button render correctly', () => {
   const { getByRole } = render(<Button></Button>);
-  expect(getByRole('button')).toBeInTheDocument()
+  const getButton = getByRole('button');
+  expect(getButton).toBeInTheDocument();
+
+  userEvent.click(getButton);
 });
