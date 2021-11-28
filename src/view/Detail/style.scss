@@ -1,10 +1,13 @@
 @import 'styles/constant/index.scss';
 
 .content {
-  display: flex;
-  justify-content: space-between;
   padding: 0 21px 0 44px;
   font-family: $font-family;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
   &__info {
     padding-right: 30px;
     color: #636363;
