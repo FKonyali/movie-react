@@ -22,7 +22,7 @@ const global = {
         payload.key && dispatch({ type: types.ADD_DATA, key: payload.key, data });
         return data;
       } catch (error) {
-          alert(get(error, 'response.data.message', 'Bilinmeyen bir hata oluştu.'));
+          alert(get(error, 'response.data.message', 'An unknown error has occurred.'));
         throw error;
       }
     },
@@ -32,7 +32,7 @@ const global = {
         const { data } = await axios.delete(payload.url, { params: payload.params });
         return data;
       } catch (error) {
-          alert(get(error, 'response.data.message', 'Bilinmeyen bir hata oluştu.'));
+          alert(get(error, 'response.data.message', 'An unknown error has occurred.'));
         throw error;
       }
     },
@@ -52,7 +52,7 @@ const global = {
         const { data } = await axios.patch(payload.url, payload.data, { params: payload.params });
         return data;
       } catch (error) {
-          alert(get(error, 'response.data.message', 'Bilinmeyen bir hata oluştu.'));
+          alert(get(error, 'response.data.message', 'An unknown error has occurred.'));
         throw error;
       }
     },
