@@ -5,11 +5,12 @@ function Button ({
   children,
   style = {},
   onClick = () => {},
-  disabled
+  disabled,
+  className = ''
 }) {
   return (
     <button 
-      className="button" 
+      className={"button" + (className ? ' ' + className : '') } 
       style={style}
       onClick={onClick}
       disabled={disabled}

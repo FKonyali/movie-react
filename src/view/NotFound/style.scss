@@ -1,0 +1,16 @@
+@import 'styles/constant/index.scss';
+
+.not-found {
+  padding: 20px;
+  text-align: center;
+  &__title {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  &__desc {
+    font-size: 2rem;
+  }
+  &__btn {
+    margin-top: 10px;
+  }
+}
