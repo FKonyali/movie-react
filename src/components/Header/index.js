@@ -1,5 +1,6 @@
 import headerImg from 'assets/img/header-img.png';
 import Button from 'components/Button';
+import Image from 'components/Image';
 import React from 'react';
 import './style.scss';
 
@@ -17,7 +18,9 @@ function Header () {
           </p>
         </div>
         <div className="header__img">
-          <img alt="Movie" src={headerImg} />
+          <Image
+            src={headerImg}
+          />
         </div>
         <Button>
           RESERVATION

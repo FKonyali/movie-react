@@ -1,0 +1,27 @@
+@import 'styles/constant/';
+
+.skeleton {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: $skeleton-background;
+  border-radius: 12px;
+  height: 100%;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background-image: $skeleton-after-background;
+    animation: loading 2s infinite;
+  }
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%)
+  }
+}
