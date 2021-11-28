@@ -4,6 +4,7 @@ import MovieBox from 'components/MovieBox';
 import Header from 'components/Header';
 import './style.scss';
 import Loading from 'components/Loading';
+import Button from 'components/Button';
 
 function Home() {
   const [movies, setMovies] = useState(null);
@@ -19,6 +20,10 @@ function Home() {
       console.log(error);
     });
   }, []);
+
+  const moreMovie = () => {
+    console.log('...')
+  }
 
   return (
     <div className="home">
@@ -46,6 +51,18 @@ function Home() {
             }
           />
         )
+      }
+      {
+        <div style={{
+          textAlign: 'center',
+          padding: '0 0 20px'
+        }}>
+          <Button
+            onClick={moreMovie}
+          >
+            More Movie
+          </Button>
+        </div>
       }
     </div>
   );
