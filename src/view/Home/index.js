@@ -9,12 +9,12 @@ import './style.scss';
 let page = 1;
 
 function Home() {
-  const [movies, setMovies] = useState(null);
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getData({ url: '?apikey=ceb2ae86&s=movie' }).then((response) => {
-      setMovies(response);
+      setMovies([response]);
       setLoading(false);
     }).catch((error) => {
       setMovies(null);
@@ -27,7 +27,7 @@ function Home() {
     page++;
     setLoading(true);
     getData({ url: `?apikey=ceb2ae86&s=movie&page=${page}` }).then((response) => {
-      setMovies({...movies, response});
+      setMovies([...movies, response]);
       setLoading(false);
     }).catch((error) => {
       setMovies(null);
@@ -40,13 +40,15 @@ function Home() {
     <div className="home">
       <Header />
       {
-        movies && movies.Search && movies.Search.map((movie) => {
-          return (
-            <MovieBox 
-              key={movie.imdbID}
-              movieData={movie}
-            />
-          )
+        movies && movies.map((item) => {
+          return item.Search.map((movie) => {
+            return (
+              <MovieBox 
+                key={movie.imdbID}
+                movieData={movie}
+              />
+            )
+          })
         })
       }
       {
@@ -64,6 +66,7 @@ function Home() {
         )
       }
       {
+        !loading &&
         <div style={{
           textAlign: 'center',
           padding: '0 0 20px'
