@@ -1,0 +1,37 @@
+@import 'styles/constant/index.scss';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 21px 0 44px;
+  font-family: $font-family;
+  &__info {
+    padding-right: 30px;
+    color: #636363;
+    font-size: 18px;
+    flex: 1;
+    span {
+      font-weight: 700
+    }
+    li {
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-wrap: wrap;
+    &__info {
+      order: 1;
+      margin-top: 15px;
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+}

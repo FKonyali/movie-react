@@ -7,7 +7,7 @@ function MovieBox ({
   movieData
 }) {
   return (
-    <Link to={movieData.imdbID} className="movie-box">
+    <Link to={'/detail/' + movieData.imdbID} className="movie-box">
       <div className="movie-box__top">
         <div className="movie-box__mtitle">
           {movieData.Title} ({movieData.Year})

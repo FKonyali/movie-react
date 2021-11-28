@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getData } from 'store/requests/global';
 import MovieBox from 'components/MovieBox';
 import Loading from 'components/Loading';
-import Header from 'components/Header';
 import Button from 'components/Button';
 import './style.scss';
 
@@ -38,7 +37,6 @@ function Home() {
 
   return (
     <div className="home">
-      <Header />
       {
         movies && movies.map((item) => {
           return item.Search.map((movie) => {
