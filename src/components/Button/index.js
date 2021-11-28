@@ -3,10 +3,15 @@ import './style.scss';
 
 function Button ({
   children,
-  style = {}
+  style = {},
+  onClick = () => {}
 }) {
   return (
-    <button className="button" style={style}>
+    <button 
+      className="button" 
+      style={style}
+      onClick={onClick}
+    >
       { children }
     </button>
   )

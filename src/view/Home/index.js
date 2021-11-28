@@ -60,7 +60,7 @@ function Home() {
           <Button
             onClick={moreMovie}
           >
-            More Movie
+            More Movie (+10)
           </Button>
         </div>
       }
